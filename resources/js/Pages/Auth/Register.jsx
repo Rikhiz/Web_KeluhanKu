@@ -12,6 +12,9 @@ export default function Register() {
         email: '',
         password: '',
         password_confirmation: '',
+        user_jenis_kelamin: '',
+        user_role: ''
+
     });
 
     useEffect(() => {
@@ -80,6 +83,38 @@ export default function Register() {
                     />
 
                     <InputError message={errors.password} className="mt-2" />
+                </div>
+                <div>
+                    <InputLabel htmlFor="user_jenis_kelamin" value="Jenis Kelamin" />
+
+                    <TextInput
+                        id="user_jenis_kelamin"
+                        name="user_jenis_kelamin"
+                        value={data.user_jenis_kelamin}
+                        className="mt-1 block w-full"
+                        autoComplete="user_jenis_kelamin"
+                        isFocused={true}
+                        onChange={(e) => setData('user_jenis_kelamin', e.target.value)}
+                        required
+                    />
+
+                    <InputError message={errors.user_jenis_kelamin} className="mt-2" />
+                </div>
+                <div>
+                    <InputLabel htmlFor="user_role" value="user_role" />
+
+                    <TextInput
+                        id="user_role"
+                        name="user_role"
+                        value={data.user_role}
+                        className="mt-1 block w-full"
+                        autoComplete="user_role"
+                        isFocused={true}
+                        onChange={(e) => setData('user_role', e.target.value)}
+                        required
+                    />
+
+                    <InputError message={errors.name} className="mt-2" />
                 </div>
 
                 <div className="mt-4">
